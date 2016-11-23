@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2016-11-23T13:02:03Z</date>
+    <date>2016-11-23T16:04:43Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -1539,7 +1539,7 @@
     <triggers>
         <trigger>
             <expression>{Template SNMP Ubiquiti AirMax:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {Template SNMP Ubiquiti AirMax:ubntWlStatNoiseFloor.last()}&lt;-101</expression>
-            <name>High Noise Floor ({ITEM.LASTVALUE}) on {HOST.NAME}</name>
+            <name>Alto Nível de Ruido ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
             <url/>
             <status>0</status>
             <priority>4</priority>
@@ -1549,7 +1549,7 @@
         </trigger>
         <trigger>
             <expression>{Template SNMP Ubiquiti AirMax:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {Template SNMP Ubiquiti AirMax:ubntWlStatNoiseFloor.last()}&gt;-90</expression>
-            <name>High Noise Floor ({ITEM.LASTVALUE}) on {HOST.NAME}</name>
+            <name>Alto Nível de Ruido ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
             <url/>
             <status>0</status>
             <priority>2</priority>
@@ -1557,14 +1557,14 @@
             <type>0</type>
             <dependencies>
                 <dependency>
-                    <name>High Noise Floor ({ITEM.LASTVALUE}) on {HOST.NAME}</name>
+                    <name>Alto Nível de Ruido ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
                     <expression>{Template SNMP Ubiquiti AirMax:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {Template SNMP Ubiquiti AirMax:ubntWlStatNoiseFloor.last()}&lt;-101</expression>
                 </dependency>
             </dependencies>
         </trigger>
         <trigger>
             <expression>{Template SNMP Ubiquiti AirMax:ubntAirMaxQuality.last()}&lt;50</expression>
-            <name>Poor AirMax Quality ({ITEM.LASTVALUE}) on {HOST.NAME}</name>
+            <name>Baixa Qualidade do AirMax ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
             <url/>
             <status>0</status>
             <priority>4</priority>
@@ -1574,7 +1574,7 @@
         </trigger>
         <trigger>
             <expression>{Template SNMP Ubiquiti AirMax:ubntAirMaxQuality.last()}&lt;70</expression>
-            <name>Poor AirMax Quality ({ITEM.LASTVALUE}) on {HOST.NAME}</name>
+            <name>Baixa Qualidade do AirMax ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
             <url/>
             <status>0</status>
             <priority>2</priority>
@@ -1582,14 +1582,14 @@
             <type>0</type>
             <dependencies>
                 <dependency>
-                    <name>Poor AirMax Quality ({ITEM.LASTVALUE}) on {HOST.NAME}</name>
+                    <name>Baixa Qualidade do AirMax ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
                     <expression>{Template SNMP Ubiquiti AirMax:ubntAirMaxQuality.last()}&lt;50</expression>
                 </dependency>
             </dependencies>
         </trigger>
         <trigger>
             <expression>{Template SNMP Ubiquiti AirMax:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {Template SNMP Ubiquiti AirMax:ubntWlStatCcq.last()}&lt;90</expression>
-            <name>Poor CCQ ({ITEM.LASTVALUE}) on {HOST.NAME}</name>
+            <name>Baixo Nível de CCQ ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
             <url/>
             <status>0</status>
             <priority>4</priority>
@@ -1599,7 +1599,7 @@
         </trigger>
         <trigger>
             <expression>{Template SNMP Ubiquiti AirMax:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {Template SNMP Ubiquiti AirMax:ubntWlStatCcq.last()}&lt;95</expression>
-            <name>Poor CCQ ({ITEM.LASTVALUE}) on {HOST.NAME}</name>
+            <name>Baixo Nível de CCQ ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
             <url/>
             <status>0</status>
             <priority>2</priority>
@@ -1607,14 +1607,14 @@
             <type>0</type>
             <dependencies>
                 <dependency>
-                    <name>Poor CCQ ({ITEM.LASTVALUE}) on {HOST.NAME}</name>
+                    <name>Baixo Nível de CCQ ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
                     <expression>{Template SNMP Ubiquiti AirMax:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {Template SNMP Ubiquiti AirMax:ubntWlStatCcq.last()}&lt;90</expression>
                 </dependency>
             </dependencies>
         </trigger>
         <trigger>
             <expression>{Template SNMP Ubiquiti AirMax:sysName.nodata(5m)}=1</expression>
-            <name>{HOST.NAME} is Down</name>
+            <name>Possível Queda do {HOST.NAME} no IP: {HOST.CONN}</name>
             <url/>
             <status>0</status>
             <priority>4</priority>
