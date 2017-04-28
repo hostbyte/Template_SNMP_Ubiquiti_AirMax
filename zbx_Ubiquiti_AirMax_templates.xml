@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>3.0</version>
-    <date>2016-11-23T16:04:43Z</date>
+    <version>3.2</version>
+    <date>2017-04-28T00:52:32Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Template SNMP Ubiquiti AirMax</template>
-            <name>Template SNMP Ubiquiti AirMax</name>
+            <template>1 - Template SNMP Ubiquiti AirMax Novo</template>
+            <name>1 - Template SNMP Ubiquiti AirMax Novo</name>
             <description/>
             <groups>
                 <group>
@@ -22,6 +22,9 @@
                     <name>General</name>
                 </application>
                 <application>
+                    <name>ICMP</name>
+                </application>
+                <application>
                     <name>Interfaces</name>
                 </application>
                 <application>
@@ -29,6 +32,137 @@
                 </application>
             </applications>
             <items>
+                <item>
+                    <name>ICMP ping</name>
+                    <type>3</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>icmpping</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>90</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>ICMP</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Perda de Pacotes ICMP</name>
+                    <type>3</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>icmppingloss</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>90</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>%</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>ICMP</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Tempo de Resposta ICMP</name>
+                    <type>3</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>icmppingsec</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>90</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>s</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>ICMP</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
                 <item>
                     <name>Número de Interfaces de Rede</name>
                     <type>1</type>
@@ -38,7 +172,7 @@
                     <key>ifNumber</key>
                     <delay>3600</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -253,7 +387,7 @@
                     <key>sysUpTime</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -296,7 +430,7 @@
                     <key>ubntAirMaxCapacity</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>1</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -339,7 +473,7 @@
                     <key>ubntAirMaxEnabled</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -382,7 +516,7 @@
                     <key>ubntAirMaxQuality</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>1</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -503,7 +637,7 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Radio Chain Mask</name>
+                    <name>Máscara da Cadeia da Rádio</name>
                     <type>1</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
@@ -511,7 +645,7 @@
                     <key>ubntRadioChainmask</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -546,7 +680,7 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Radio Frequency</name>
+                    <name>Frequência do Rádio</name>
                     <type>1</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
@@ -554,7 +688,7 @@
                     <key>ubntRadioFreq</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -589,7 +723,7 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Radio Mode</name>
+                    <name>Modo de Operação do Rádio</name>
                     <type>1</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
@@ -597,7 +731,7 @@
                     <key>ubntRadioMode</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -640,7 +774,7 @@
                     <key>ubntRadioTxPower</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -683,7 +817,7 @@
                     <key>ubntWlStatCcq</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -718,7 +852,7 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Radio Channel Width</name>
+                    <name>Largura do canal do Rádio</name>
                     <type>1</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
@@ -726,7 +860,7 @@
                     <key>ubntWlStatChanWidth</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -761,7 +895,7 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Radio Noise</name>
+                    <name>Ruído do Rádio</name>
                     <type>1</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
@@ -769,7 +903,7 @@
                     <key>ubntWlStatNoiseFloor</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -804,7 +938,7 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Radio RSSI</name>
+                    <name>Indicação da intensidade do sinal recebido no Rádio</name>
                     <type>1</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
@@ -812,7 +946,7 @@
                     <key>ubntWlStatRssi</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -847,7 +981,7 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Radio Rx Rate</name>
+                    <name>Taxa de RX do Rádio</name>
                     <type>1</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
@@ -855,7 +989,7 @@
                     <key>ubntWlStatRxRate</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -890,7 +1024,7 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Radio Signal</name>
+                    <name>Sinal do Rádio</name>
                     <type>1</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
@@ -898,7 +1032,7 @@
                     <key>ubntWlStatSignal</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -933,7 +1067,7 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Radio Count Stations</name>
+                    <name>Número de estações conectadas no rádio</name>
                     <type>1</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
@@ -941,7 +1075,7 @@
                     <key>ubntWlStatStaCount</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -976,7 +1110,7 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Radio Tx Rate</name>
+                    <name>Taxa de TX do Rádio</name>
                     <type>1</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
@@ -984,7 +1118,7 @@
                     <key>ubntWlStatTxRate</key>
                     <delay>60</delay>
                     <history>7</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -1021,12 +1155,12 @@
             </items>
             <discovery_rules>
                 <discovery_rule>
-                    <name>Network interfaces</name>
+                    <name>Interfaces de rede</name>
                     <type>1</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},IF-MIB::ifDescr]</snmp_oid>
                     <key>ifDescr</key>
-                    <delay>3600</delay>
+                    <delay>60</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1063,7 +1197,7 @@
 {$SNMP_COMMUNITY} is a global macro.</description>
                     <item_prototypes>
                         <item_prototype>
-                            <name>Admin status of interface $1</name>
+                            <name>Status do administrador da interface {#SNMPVALUE}</name>
                             <type>1</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
@@ -1095,7 +1229,7 @@
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The desired state of the interface.</description>
+                            <description>O estado desejado da interface.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -1109,7 +1243,7 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Alias of interface $1</name>
+                            <name>Apelido da Interface {#SNMPVALUE}</name>
                             <type>1</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
@@ -1153,7 +1287,7 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Description of interface $1</name>
+                            <name>Descrição da interface $1</name>
                             <type>1</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
@@ -1185,7 +1319,7 @@
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>A textual string containing information about the interface.  This string should include the name of the manufacturer, the product name and the version of the interface hardware/software.</description>
+                            <description>Uma cadeia textual contendo informações sobre a interface. Essa seqüência deve incluir o nome do fabricante, o nome do produto e a versão do hardware / software da interface.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -1197,7 +1331,7 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Inbound errors on interface $1</name>
+                            <name>Erros de entrada na interface $1</name>
                             <type>1</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
@@ -1229,7 +1363,7 @@
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</description>
+                            <description>Para interfaces orientadas a pacotes, o número de pacotes de entrada que continham erros impedindo-os de serem entregues a um protocolo de camada superior. Para interfaces orientadas a caracteres ou de comprimento fixo, o número de unidades de transmissão de entrada que continham erros impedi-las de serem entregues a um protocolo de camada superior.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -1241,7 +1375,7 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Incoming traffic on interface $1</name>
+                            <name>Tráfego de entrada na interface $1</name>
                             <type>1</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>1</multiplier>
@@ -1273,7 +1407,7 @@
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</description>
+                            <description>O número de octetos em quadros MAC válidos recebidos nesta interface, incluindo o cabeçalho MAC e FCS.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -1285,7 +1419,7 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Operational status of interface $1</name>
+                            <name>Status operacional da interface $1</name>
                             <type>1</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
@@ -1317,7 +1451,7 @@
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The current operational state of the interface.</description>
+                            <description>O estado operacional atual da interface.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -1331,7 +1465,7 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Outbound errors on interface $1</name>
+                            <name>Erros de saída na interface $1</name>
                             <type>1</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
@@ -1363,7 +1497,7 @@
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</description>
+                            <description>Para interfaces orientadas a pacotes, o número de pacotes de saída que não puderam ser transmitidos por causa de erros. Para interfaces orientadas a caracteres ou de comprimento fixo, o número de unidades de transmissão de saída que não puderam ser transmitidas por causa de erros.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -1375,7 +1509,7 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Outgoing traffic on interface $1</name>
+                            <name>Tráfego de saída na interface $1</name>
                             <type>1</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>1</multiplier>
@@ -1407,7 +1541,7 @@
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</description>
+                            <description>O número de octetos em quadros MAC válidos recebidos nesta interface, incluindo o cabeçalho MAC e FCS.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -1419,7 +1553,7 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Speed of interface $1</name>
+                            <name>Velocidade da Interface $1</name>
                             <type>1</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
@@ -1451,7 +1585,7 @@
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The desired state of the interface.</description>
+                            <description/>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -1467,19 +1601,25 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template SNMP Ubiquiti AirMax:ifOperStatus[{#SNMPVALUE}].diff(0)}=1</expression>
-                            <name>Operational status was changed on {HOST.NAME} interface {#SNMPVALUE}</name>
+                            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:ifOperStatus[{#SNMPVALUE}].diff(0)}=1</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>O status operacional foi alterado {HOST.NAME} interface {#SNMPVALUE}</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
                             <url/>
                             <status>0</status>
                             <priority>1</priority>
                             <description/>
                             <type>0</type>
+                            <manual_close>0</manual_close>
                             <dependencies/>
+                            <tags/>
                         </trigger_prototype>
                     </trigger_prototypes>
                     <graph_prototypes>
                         <graph_prototype>
-                            <name>Traffic on interface {#SNMPVALUE}</name>
+                            <name>Trafego da interface {#SNMPVALUE}</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
@@ -1504,7 +1644,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template SNMP Ubiquiti AirMax</host>
+                                        <host>1 - Template SNMP Ubiquiti AirMax Novo</host>
                                         <key>ifInOctets[{#SNMPVALUE}]</key>
                                     </item>
                                 </graph_item>
@@ -1516,7 +1656,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template SNMP Ubiquiti AirMax</host>
+                                        <host>1 - Template SNMP Ubiquiti AirMax Novo</host>
                                         <key>ifOutOctets[{#SNMPVALUE}]</key>
                                     </item>
                                 </graph_item>
@@ -1526,104 +1666,272 @@
                     <host_prototypes/>
                 </discovery_rule>
             </discovery_rules>
-            <macros>
-                <macro>
-                    <macro>{$SNMP_COMMUNITY}</macro>
-                    <value>public</value>
-                </macro>
-            </macros>
+            <httptests/>
+            <macros/>
             <templates/>
             <screens/>
         </template>
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template SNMP Ubiquiti AirMax:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {Template SNMP Ubiquiti AirMax:ubntWlStatNoiseFloor.last()}&lt;-101</expression>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {1 - Template SNMP Ubiquiti AirMax Novo:ubntWlStatNoiseFloor.last()}&lt;-101</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
             <name>Alto Nível de Ruido ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
             <url/>
-            <status>0</status>
+            <status>1</status>
             <priority>4</priority>
             <description/>
             <type>0</type>
+            <manual_close>0</manual_close>
             <dependencies/>
+            <tags/>
         </trigger>
         <trigger>
-            <expression>{Template SNMP Ubiquiti AirMax:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {Template SNMP Ubiquiti AirMax:ubntWlStatNoiseFloor.last()}&gt;-90</expression>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {1 - Template SNMP Ubiquiti AirMax Novo:ubntWlStatNoiseFloor.last()}&gt;-90</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
             <name>Alto Nível de Ruido ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
             <url/>
-            <status>0</status>
+            <status>1</status>
             <priority>2</priority>
             <description/>
             <type>0</type>
+            <manual_close>0</manual_close>
             <dependencies>
                 <dependency>
                     <name>Alto Nível de Ruido ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
-                    <expression>{Template SNMP Ubiquiti AirMax:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {Template SNMP Ubiquiti AirMax:ubntWlStatNoiseFloor.last()}&lt;-101</expression>
+                    <expression>{1 - Template SNMP Ubiquiti AirMax Novo:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {1 - Template SNMP Ubiquiti AirMax Novo:ubntWlStatNoiseFloor.last()}&lt;-101</expression>
+                    <recovery_expression/>
                 </dependency>
             </dependencies>
+            <tags/>
         </trigger>
         <trigger>
-            <expression>{Template SNMP Ubiquiti AirMax:ubntAirMaxQuality.last()}&lt;50</expression>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:ubntAirMaxQuality.last()}&lt;50</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
             <name>Baixa Qualidade do AirMax ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
             <url/>
-            <status>0</status>
+            <status>1</status>
             <priority>4</priority>
             <description/>
             <type>0</type>
+            <manual_close>0</manual_close>
             <dependencies/>
+            <tags/>
         </trigger>
         <trigger>
-            <expression>{Template SNMP Ubiquiti AirMax:ubntAirMaxQuality.last()}&lt;70</expression>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:ubntAirMaxQuality.last()}&lt;70</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
             <name>Baixa Qualidade do AirMax ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
             <url/>
-            <status>0</status>
+            <status>1</status>
             <priority>2</priority>
             <description/>
             <type>0</type>
+            <manual_close>0</manual_close>
             <dependencies>
                 <dependency>
                     <name>Baixa Qualidade do AirMax ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
-                    <expression>{Template SNMP Ubiquiti AirMax:ubntAirMaxQuality.last()}&lt;50</expression>
+                    <expression>{1 - Template SNMP Ubiquiti AirMax Novo:ubntAirMaxQuality.last()}&lt;50</expression>
+                    <recovery_expression/>
                 </dependency>
             </dependencies>
+            <tags/>
         </trigger>
         <trigger>
-            <expression>{Template SNMP Ubiquiti AirMax:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {Template SNMP Ubiquiti AirMax:ubntWlStatCcq.last()}&lt;90</expression>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {1 - Template SNMP Ubiquiti AirMax Novo:ubntWlStatCcq.last()}&lt;90</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
             <name>Baixo Nível de CCQ ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>1</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {1 - Template SNMP Ubiquiti AirMax Novo:ubntWlStatCcq.last()}&lt;95</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Baixo Nível de CCQ ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>1</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies>
+                <dependency>
+                    <name>Baixo Nível de CCQ ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
+                    <expression>{1 - Template SNMP Ubiquiti AirMax Novo:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {1 - Template SNMP Ubiquiti AirMax Novo:ubntWlStatCcq.last()}&lt;90</expression>
+                    <recovery_expression/>
+                </dependency>
+            </dependencies>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:icmpping.max(#5)}=0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Indisponibilidade de 5 minutos na resposta ICMP para: {HOST.NAME} no endereço de IP: {HOST.CONN}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
             <url/>
             <status>0</status>
             <priority>4</priority>
             <description/>
             <type>0</type>
-            <dependencies/>
+            <manual_close>1</manual_close>
+            <dependencies>
+                <dependency>
+                    <name>Indisponibilidade de 10 minutos na resposta ICMP para: {HOST.NAME} no endereço de IP: {HOST.CONN}</name>
+                    <expression>{1 - Template SNMP Ubiquiti AirMax Novo:icmpping.max(#10)}=0</expression>
+                    <recovery_expression/>
+                </dependency>
+            </dependencies>
+            <tags/>
         </trigger>
         <trigger>
-            <expression>{Template SNMP Ubiquiti AirMax:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {Template SNMP Ubiquiti AirMax:ubntWlStatCcq.last()}&lt;95</expression>
-            <name>Baixo Nível de CCQ ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:sysName.nodata(5m)}=1</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Indisponibilidade de 5 minutos na resposta ICMP para: {HOST.NAME} no endereço de IP: {HOST.CONN}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>1</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:icmpping.max(#10)}=0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Indisponibilidade de 10 minutos na resposta ICMP para: {HOST.NAME} no endereço de IP: {HOST.CONN}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:icmppingloss.min(5m)}&gt;20</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Nos últimos 5 minutos ocorreu 20% de perda na reposta ICMP para: {HOST.NAME} no endereço de IP: {HOST.CONN}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
             <url/>
             <status>0</status>
             <priority>2</priority>
             <description/>
             <type>0</type>
+            <manual_close>1</manual_close>
             <dependencies>
                 <dependency>
-                    <name>Baixo Nível de CCQ ({ITEM.LASTVALUE}) em {HOST.NAME} no IP: {HOST.CONN}</name>
-                    <expression>{Template SNMP Ubiquiti AirMax:ubntChipsetVersion.regexp(&quot;XM&quot;)}=1 and {Template SNMP Ubiquiti AirMax:ubntWlStatCcq.last()}&lt;90</expression>
+                    <name>Indisponibilidade de 5 minutos na resposta ICMP para: {HOST.NAME} no endereço de IP: {HOST.CONN}</name>
+                    <expression>{1 - Template SNMP Ubiquiti AirMax Novo:icmpping.max(#5)}=0</expression>
+                    <recovery_expression/>
                 </dependency>
             </dependencies>
+            <tags/>
         </trigger>
         <trigger>
-            <expression>{Template SNMP Ubiquiti AirMax:sysName.nodata(5m)}=1</expression>
-            <name>Possível Queda do {HOST.NAME} no IP: {HOST.CONN}</name>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:icmppingsec.avg(5m)}&gt;0.15</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Nos últimos 5 minutos o tempo de resposta ICMP esteve acima de 150ms para: {HOST.NAME} no endereço de IP: {HOST.CONN} está acima da média.</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
             <url/>
             <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies>
+                <dependency>
+                    <name>Indisponibilidade de 5 minutos na resposta ICMP para: {HOST.NAME} no endereço de IP: {HOST.CONN}</name>
+                    <expression>{1 - Template SNMP Ubiquiti AirMax Novo:icmpping.max(#5)}=0</expression>
+                    <recovery_expression/>
+                </dependency>
+            </dependencies>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:ubntWlStatStaCount.min(3)}=0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>{HOST.NAME} no IP: {HOST.CONN} - Não possui clientes conectados a mais de 3 minutos. Possível travamento da placa Wireless</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>1</status>
             <priority>4</priority>
             <description/>
             <type>0</type>
+            <manual_close>0</manual_close>
             <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{1 - Template SNMP Ubiquiti AirMax Novo:ubntWlStatStaCount.min(10)}=0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>{HOST.NAME} no IP: {HOST.CONN} - Não possui clientes conectados a mais de 10 minutos. Possível travamento da placa Wireless</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>1</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
         </trigger>
     </triggers>
     <value_maps>
+        <value_map>
+            <name>Service state</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Down</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Up</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
         <value_map>
             <name>SNMP interface status (ifAdminStatus)</name>
             <mappings>
